@@ -1,4 +1,4 @@
-package com.example.entity;
+package com.example.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;

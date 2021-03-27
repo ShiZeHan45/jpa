@@ -1,6 +1,8 @@
 package com.example.entity;
 
 
+import com.example.entity.base.MultiTenantSupport;
+
 import javax.persistence.*;
 
 @Entity

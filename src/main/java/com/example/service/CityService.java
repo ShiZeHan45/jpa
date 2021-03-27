@@ -1,8 +1,6 @@
 package com.example.service;
 
-import com.example.entity.BCity;
 import com.example.entity.City;
-import com.example.repository.CityExtendRepository;
 import com.example.repository.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,8 +16,6 @@ public class CityService {
 
     @Autowired
     private CityRepository cityRepository;
-    @Autowired
-    private CityExtendRepository cityExtendRepository;
 
     @PersistenceContext
     public EntityManager entityManager;
@@ -83,11 +79,6 @@ public class CityService {
      */
     public City getByName(String name){
         return cityRepository.findByName4HQL(name);
-    }
-
-
-    public List<BCity> BCityExtend(String name){
-        return cityExtendRepository.findByName(name);
     }
 
     /**

@@ -1,6 +1,5 @@
 package com.example.controller;
 
-import com.example.entity.BCity;
 import com.example.entity.City;
 import com.example.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,12 +25,6 @@ public class CityController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ResponseEntity<List<City>> getAll() throws SQLException {
         List<City> cities = cityService.getAll();
-        return new ResponseEntity<>(cities, HttpStatus.OK);
-    }
-
-    @RequestMapping(value = "/extend/{name}", method = RequestMethod.GET)
-    public ResponseEntity<List<BCity>> getAll(@PathVariable(value = "name") String name) throws SQLException {
-        List<BCity> cities = cityService.BCityExtend(name);
         return new ResponseEntity<>(cities, HttpStatus.OK);
     }
 
